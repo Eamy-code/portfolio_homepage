@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    font-size: auto;
+    background-color: gray;
+    color: #fff;
+}
+
+hr {
+    margin-bottom: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: lightblue;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.container aside h1 {
+    color: black;
+}
+
+span {
+    color: #fff;
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 15%;
+    flex: 1 1 15%;
+    background: linear-gradient(to bottom, #666666,#333333);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+aside h1 {
+    color: #fff;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+aside p {
+    color: #fff;
+}
+
+aside i {
+    color: lightgray;
+    font-size: 2.5rem;
+}
+
+aside ul {
+    padding-left: 0;
+    list-style: none;
+    margin: auto 0;
+}
+
+aside ul li {
+    margin-bottom: 20px;
+}
+
+aside ul li a {
+    color: #fff;
+}
+
+aside ul li a:hover {
+    opacity: 0.5;
+    font-size: 1.5rem;
+    transition: 0.2s
+}
+
+
+main {
+    flex: 1 1 85%;
+    margin-left: 15%;
+}
+
+header {
+    width: auto;
+    height: 100vh;
+}
+
+header #particles {
+    position: absolute;
+    width: max;
+    height: 100vh;
+}
+
+header .info-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 100vh;
+}
+
+header .info-text h1 {
+    font-size: 3.5rem;
+    font-weight:auto;
+    font-family: 'Ubuntu';
+}
+
+header .info-text h3 {
+    font-size: auto;
+}
+
+header .info-text .scroll {
+    position: absolute;
+    bottom: 20%;
+    left: auto;
+    color: #fff;
+    transform: translate(0, -50%);
+    transition: all 0.5s;
+}
+
+header .info-text .scroll:hover {
+    opacity: 0.7;
+}
+
+header .info-text .scroll::before {
+    position: absolute;
+    top: -16px;
+    left: -16px;
+    z-index: -1;
+    content: '';
+    width: 44px;
+    height: 44px;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+    border-radius: 100%;
+    animation: pulse 3s infinite;
+}
+
+
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    15%,
+    45% {
+        opacity: 1;
+    }
+
+    60% {
+        box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.1);
+        opacity: 0;
+    }
+}
+
+#about,
+#features {
+    padding: 40px;
+}
+
+
+#about .header,
+#features .header {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#about .header h1,
+#features .header h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#about .card,
+#features .card {
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 20px;
+    display: flex;
+    gap: 30px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    margin: 60px;
+}
+
+#about .card:hover,
+#features .card:hover {
+    border-color: #fff;
+    box-shadow: none;
+}
+
+
+#about .card .info h1,
+#features .card .info h1 {
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: auto;
+    font-weight: bold;
+    font-family: 'Ubuntu';
+    display: flex;
+}
+
+#about .card .info p,
+#features .card .info p {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+}
+
+
+#about .homeinfo {
+    display: flex;
+}
+
+#about .homeinfo img {
+    height: auto;
+    max-height: 200px;
+    width: auto;
+    margin-right: 50px;
+}
+
+#features .feature-cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#features .feature-cards .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: 350px;
+}
+
+#features .feature-cards .card .info i {
+    color: #fff;
+    font-size: 6rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.4rem;
+}
+
+#features .feature-cards .card .info h1 {
+    text-align: center;
+}
+
+#features .feature-cards .card .info p {
+    font-size: 1.1rem;
+}
+
+.scroll-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: gray;
+    color: #fff;
+    border: 1px solid transparent;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    padding: 16px 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.scroll-top:hover {
+    border-color: #fff;
+    box-shadow: none;
+}
+
+
+.code-card {
+    color: #fff;
+    background-color: #333333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    width:90%;
+    margin-bottom: 50px;
+}
+
+.code-card h2 {
+    font-size: 14px;
+}
+
+.code-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+code{
+    display: block;
+    white-space: pre-wrap;
+    overflow-x: auto;
+    background-color: black;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.copy-button {
+    background-color: gray;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.details {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center
+}
+
+
+.details .cssdetails {
+    margin-left: auto;
+    width: max;
+}
+
+.details .cssdetails h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+footer {
+    width: auto;
+    height: 100px;
+    background-color:#333333;
+    display: flex;
+    padding: 6px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.end p:nth-child(1) {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 8px;
+    font-weight: bold;
+
+}
+
+.end p:nth-child(2) {
+    color: white;
+    font-size: 10px;
+    width: auto;
+    text-align: center;
+}
+
+.end p:nth-child(3) {
+    color: white;
+    margin-top: 20px;
+    font-size: 10px;
+}
+
+
+
+@media screen and (max-width: 720px) {
+    body {
+        font-size: auto;
+    }
+
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    aside {
+        position: static;
+        width: auto;
+    }
+
+    aside h1 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    aside p{
+        margin-bottom: 10px;
+    }
+
+    aside ul{
+        display: flex;
+        justify-content: space-around;
+    }
+
+
+    main {
+        margin-left: 0;
+        flex: 1;
+    }
+
+    #about .homeinfo {
+        flex-direction: column;
+    }
+
+    header .info-text h1 {
+        font-size: 3rem;
+    }
+
+    #about .card,
+    #features .card {
+        margin: 30px;
+    }
+
+    #about .homeinfo img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    #features .feature-cards .card {
+        min-width: 100%; 
+    }
+
+    header .info-text .scroll {
+        position: absolute;
+        bottom:0%;
+        left: auto;
+        color: #fff;
+        transform: translate(0, -50%);
+        transition: all 0.5s;
+    }
+
+    .scroll-top {
+        display: block; 
+    }
+
+
+    footer {
+        height: auto; 
+    }
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../style.css">
+    <title>Eamy-code</title>
+</head>
+
+<body>
+    <div class="container">
+        <aside>
+            <h1><span>Eamy-</span>code</h1>
+            <i class='bx bxl-visual-studio'></i>
+            <p>used vscode</p>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./plofile.html">My profile</a></li>
+                <li><a href="./code.html">Struggled code</a></li>
+                <li><a href="./features.html">Features</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <header>
+                <div id="particles"></div>
+                <div class="info-text">
+                    <h1>Struggled code</h1>
+                    <h3>このホームページは名刺に掲載したURLより閲覧でき、
+                        <br>自己紹介と供にポートフォリオを兼ねています
+                    </h3>
+                    <a href="#about" class="scroll"><i class='bx bxs-down-arrow'></i></a>
+                </div>
+            </header>
+
+            <section id="about">
+                <div class="header">
+                    <h1>Code details</h1>
+                </div>
+                <hr>
+
+                <div class="details">
+                    <div class="code-card">
+                        <div class="code-header">
+                            <h2>html</h2>
+                            <button class="copy-button" onclick="copyCode()">
+                                <span id="copyButtonText"><i class='bx bxs-copy'></i>Copy code</span>
+                            </button>
+                        </div>
+
+                        <code id="codeToCopy">
+            &lt;body&gt;
+
+                    &lt;div class="container"&gt;
+
+                            &lt;aside&gt;
+
+                                &lt;h1&gt;&lt;span&gt;Eamy-&lt;/span&gt;code&lt;/h1&gt;
+                                    &lt;i class='bx bxl-visual-studio'&gt;&lt;/i&gt;
+                                        &lt;p&gt;used vscode&lt;/p&gt;
+                                            &lt;ul&gt;
+                                                &lt;li&gt;&lt;a href="./home.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                                                &lt;li&gt;&lt;a href="./plofile.html"&gt;My profile&lt;/a&gt;&lt;/li&gt;
+                                                &lt;li&gt;&lt;a href="./code.html"&gt;Struggled code&lt;/a&gt;&lt;/li&gt;
+                                                &lt;li&gt;&lt;a href="./features.html"&gt;Features&lt;/a&gt;&lt;/li&gt;
+                                            &lt;/ul&gt;
+
+                            &lt;/aside&gt;
+
+                            &lt;main&gt;
+                            &lt;/main&gt;
+
+                    &lt;/div&gt;
+            &lt;/body&gt;
+    
+                        </code>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="info">
+                            <h1>css detail</h1>
+                            <hr>
+                            <p>
+                                今回特に拘ったポイントは
+                                side navigationbarのcssの当て方です。<br><br>
+                                asideをsidebarに設定したかったためhtmlのcodeにあるように
+                                containerタグをつけdisplay:flex;をあてました。
+                                さらにheightを100vhにすることで固定した際に余白が出ないよう工夫しました。
+                                また画面全体を15:85の比率にして表示したかったのでflex:1 1 15%;をあてています。<br><br>
+                                それぞれのaタグのlinkはhoverをつけカーソルを合わせると反応するようにしています。
+                                また、ulタグのみ差別化し中央に配置することで直感的にnavigatio機能だとわかるように工夫しました。<br><br>
+                                Eamy-codeはspanタグを使用して色を印象付けるために変えたのですが
+                                backgroundcolorを統一して1色にしてしまうとどちらかの色が見にくくなるためグラデーションをつけて
+                                Eamy-とcodeどちらの色も見やすいよう工夫しました。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+
+
+            <button class="scroll-top" onclick="scrollToTop()">
+                <i class='bx bxs-up-arrow'></i>
+            </button>
+
+
+            <footer class="end">
+                <p>Eamy code</p>
+                <p>-Please subscribe my Twitter account- </p>
+                <p>Copylight@Eamy Code</p>
+            </footer>
+
+
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>
